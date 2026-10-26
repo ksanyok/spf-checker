@@ -1,0 +1,16 @@
+name: 'SPF Checker by PromoPilot'
+description: 'Validate a domain's SPF record: syntax, policy and the 10 DNS lookup limit across all includes.'
+author: 'Alexandr Krikun'
+branding:
+  icon: 'mail'
+  color: 'purple'
+inputs:
+  args:
+    description: 'Arguments passed to the spf-checker CLI, e.g. "example.com"'
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Run spf-checker
+      shell: bash
+      run: node "$GITHUB_ACTION_PATH/bin/cli.js" ${{ inputs.args }}

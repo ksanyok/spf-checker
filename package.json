@@ -1,0 +1,54 @@
+{
+  "name": "@promopilot/spf-checker",
+  "version": "1.0.0",
+  "description": "Validate SPF records from the command line: syntax, +all/?all, ptr, multiple records, include loops and the 10-DNS-lookup limit, with a full include tree. Zero-dependency Node.js CLI, library and GitHub Action. Free online version by PromoPilot.",
+  "keywords": [
+    "spf",
+    "spf-checker",
+    "spf-record",
+    "email-authentication",
+    "email-deliverability",
+    "dmarc",
+    "dns",
+    "email-security",
+    "cli",
+    "nodejs",
+    "github-action",
+    "devops",
+    "promopilot"
+  ],
+  "homepage": "https://promopilot.link/en/tools/spf-checker.php?utm_source=github&utm_medium=repo&utm_campaign=tools&utm_content=spf-checker",
+  "bugs": {
+    "url": "https://github.com/ksanyok/spf-checker/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ksanyok/spf-checker.git"
+  },
+  "license": "MIT",
+  "author": "Alexandr Krikun (https://github.com/ksanyok)",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "spf-checker": "bin/cli.js"
+  },
+  "files": [
+    "src",
+    "bin",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
